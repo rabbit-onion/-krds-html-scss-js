@@ -4,29 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRDS template</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="페이지 제목" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+    <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="페이지 제목" />
+    <meta name="twitter:description" content="페이지 설명" />
+    <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+    <meta name="twitter:domain" content="사이트 명" />
+    <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../resources/css/styles.css" />
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <div id="wrap">
-      <header>
-        <h1><a href="#">logo</a></h1>
-        <nav id="gnb">
-          <ul>
-            <li>
-              <a href="#">menu1</a>
-              <ul>
-                <li><a href="#">menu1</a></li>
-                <li><a href="#">menu2</a></li>
-                <li><a href="#">menu3</a></li>
-                <li><a href="#">menu4</a></li>
-              </ul>
-            </li>
-            <li><a href="#">menu2</a></li>
-            <li><a href="#">menu3</a></li>
-            <li><a href="#">menu4</a></li>
-          </ul>
-        </nav>
-      </header>
+    <div id="skip-nav">
+      <a href="#gnb">메뉴 바로가기</a>
+      <a href="#container">본문 바로가기</a>
     </div>
+    <div id="wrap">
+      <header id="header">header</header>
+      <div class="slide">
+        <!-- Slider main container -->
+        <div class="swiper slide-intro">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="#"><img src="https://img.animalplanet.co.kr/news/2020/07/23/700/99e939u44so0638qr8di.jpg" alt="호달달고양이" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="https://cdn.animaltoc.com/news/photo/202405/1089_5226_530.jpg" alt="낮잠고양이" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="https://i.namu.wiki/i/jBRjPCiyxoJvrjOh-UuQgcXIKYH1WEU2KbiqOpq7Qbs_sjivoR4bWAgFw3dq_uDOgf1PswVnmeue7zWSbTl3xy2EtTRizVln5WJ48RXzLeQlLlxJwJCLP421pPDIjib9IMvgx6JZZDBgxbl0ivF0bQ.webp" alt="브리티시숏헤어" /></a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <main id="container">content</main>
+      <footer id="footer">footer</footer>
+    </div>
+
+    <script>
+      var swiper = new Swiper('.slide-intro', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        // autoplay: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        //   },
+        //   768: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //   },
+        //   1024: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 50,
+        //   },
+        // },
+      });
+    </script>
   </body>
 </html>
