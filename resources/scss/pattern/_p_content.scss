@@ -4,30 +4,148 @@
   --swiper-theme-color: red;
 }
 
+#skip-nav,
+#header {
+  display: none;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
+  .swiper-slide {
+    font-size: 18px;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+  .swiper-button-prev::before,
+  .swiper-button-next::before {
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 3rem;
+    color: $white;
+    opacity: 0.5;
+  }
+  .swiper-button-prev::before {
+    content: '\f137';
+  }
+  .swiper-button-next::before {
+    content: '\f138';
   }
 }
 
-.swiper-slide {
-  img {
-    display: block;
+.slide-intro {
+  .swiper-slide {
+    position: relative;
+    img {
+      object-fit: cover;
+      object-position: 50% 100%;
+    }
+    .text-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      max-width: 400px;
+      color: $white;
+      &__tit {
+        // 부모와 클래스이름 중복되는 부분은 &으로 처리 가능
+        font-size: 3rem;
+        color: $gray-90;
+      }
+      &__cont {
+        color: $gray-70;
+      }
+      &__goto {
+        display: inline-block;
+        padding: 7px 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+// tablet
+@media screen and (min-width: 600px) {
+  .slide-intro .swiper-slide img {
+    height: 70vh;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+  .slide-intro {
+    .swiper-slide {
+      img {
+        height: 80vh;
+      }
+
+      .text-area {
+        text-align: left;
+
+        // position: absolute;
+        width: 100%;
+        max-width: none;
+      }
+
+      .text-area__tit {
+        font-size: 6rem;
+      }
+
+      .text-area__cont {
+        font-size: 2rem;
+      }
+
+      .text-area__goto {
+        margin-top: 30px;
+      }
+    }
+
+    .swiper-pagination,
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: block;
+    }
+  }
+}
+
+.slide-studio {
+  overflow: visible;
+  width: 80%;
+  margin-left: 0;
+  @include mobileMore {
+    width: 90%;
+  }
+  @include tabletMore {
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    margin-left: auto;
   }
 }

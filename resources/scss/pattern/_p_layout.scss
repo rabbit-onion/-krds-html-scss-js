@@ -1,2 +1,49 @@
 // 사이트 레이아웃 관련 요소
 // wrap, header, footer, aside ..etc
+
+// 사이트 레이아웃 관련 요소
+.bg-gray {
+  background-color: $gray-5;
+}
+
+// grid layout
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: $grid;
+  margin: 0 auto;
+  padding: 0 $p-mobile;
+  @include tablet {
+    padding: 0 $p-tablet;
+  }
+}
+
+// section layout
+.sec-g {
+  padding: 10vw 0;
+  &__tit {
+    font-size: 4.8rem;
+    padding-bottom: 2.34375vw;
+  }
+  &__more {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 17px;
+    right: 30px;
+    font-size: 2rem;
+    &::after {
+      display: flex;
+      content: '\f061';
+      width: 40px;
+      height: 40px;
+      background-color: $gray-20;
+      border-radius: 50%;
+      font-family: 'Line Awesome Free';
+      font-weight: 900;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
