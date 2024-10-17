@@ -6,7 +6,6 @@
 
 #skip-nav,
 #header {
-  display: none;
 }
 
 .swiper {
@@ -36,8 +35,7 @@
   }
   .swiper-button-prev::before,
   .swiper-button-next::before {
-    font-family: 'Line Awesome Free';
-    font-weight: 900;
+    @include lineAwesome;
     font-size: 3rem;
     color: $white;
     opacity: 0.5;
@@ -53,6 +51,12 @@
 .slide-intro {
   .swiper-slide {
     position: relative;
+    &.swiper-slide-active {
+      .text-area {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
     img {
       object-fit: cover;
       object-position: 50% 100%;
@@ -61,10 +65,12 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 25%);
       width: 70%;
       max-width: 400px;
       color: $white;
+      opacity: 0;
+      transition: all 1s;
       &__tit {
         // 부모와 클래스이름 중복되는 부분은 &으로 처리 가능
         font-size: 3rem;

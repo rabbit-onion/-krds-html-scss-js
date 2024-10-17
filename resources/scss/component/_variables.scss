@@ -191,6 +191,13 @@ $font-size: (
   ),
 ) !default;
 
+// font weight
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-medium: 500 !default;
+$font-bold: 700 !default;
+$font-bolder: 800 !default;
+
 $fws: (
   'light': 300,
   'normal': 400,

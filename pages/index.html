@@ -28,12 +28,114 @@
       <a href="#container">본문 바로가기</a>
     </div>
     <div id="wrap">
-      <header id="header">
-        <h1>
-          <a href="#">logo</a>
-        </h1>
-        <nav>nav</nav>
-        <div class="util">util</div>
+      <!-- active 추가 시 depth2 활성화 -->
+      <header id="header" class="">
+        <!-- 그리드 맞추는 용도의 div -->
+        <div class="inner">
+          <h1 id="logo">
+            <a href="#">
+              <span>우리자산운용</span>
+            </a>
+          </h1>
+          <nav id="gnb" class="gnb">
+            <ul class="gnb__depth1">
+              <li>
+                <a href="#"><span>menu1</span></a>
+                <ul class="gnb__depth2">
+                  <li><a href="#">menu1-1</a></li>
+                  <li><a href="#">menu2-1</a></li>
+                  <li><a href="#">menu3-1</a></li>
+                  <li><a href="#">menu4-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>menu2</span></a>
+                <ul class="gnb__depth2">
+                  <li><a href="#">menu1-1</a></li>
+                  <li><a href="#">menu2-1</a></li>
+                  <li><a href="#">menu3-1</a></li>
+                  <li><a href="#">menu4-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>menu3</span></a>
+                <ul class="gnb__depth2">
+                  <li><a href="#">menu1-1</a></li>
+                  <li><a href="#">menu2-1</a></li>
+                  <li><a href="#">menu3-1</a></li>
+                  <li><a href="#">menu4-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>menu4</span></a>
+                <ul class="gnb__depth2">
+                  <li><a href="#">menu1-1</a></li>
+                  <li><a href="#">menu2-1</a></li>
+                  <li><a href="#">menu3-1</a></li>
+                  <li><a href="#">menu4-1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="util">
+            <div class="lang">
+              <button class="lang__btn">kor</button>
+              <ul class="lang__list">
+                <li>kor</li>
+                <li>eng</li>
+              </ul>
+            </div>
+            <button class="search">
+              <span class="blind">검색</span>
+            </button>
+            <button class="all-menu">
+              <span class="blind">전체 메뉴</span>
+            </button>
+          </div>
+        </div>
+        <nav id="nav-all">
+          <ul class="gnb__depth1">
+            <li>
+              <a href="#"><span>menu1</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>menu2</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>menu3</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>menu4</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="close">
+            <span class="blind">전체메뉴 닫기</span>
+          </button>
+        </nav>
       </header>
       <div class="slide">
         <!-- Slider main container -->
@@ -59,10 +161,72 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#"><img src="https://cdn.animaltoc.com/news/photo/202405/1089_5226_530.jpg" alt="낮잠고양이" /></a>
+              <a href="#">
+                <picture>
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353402003-effbc48c547d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353400249-1d96e1a7e0e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
+                  <source srcset="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                  <img src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="하품고양이" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <strong class="text-area__tit">slide 제목</strong>
+                    <p class="text-area__cont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, consequatur!</p>
+                    <span href="#" class="text-area__goto text-area__goto--hidden">바로가기</span>
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <a href="#"><img src="https://i.namu.wiki/i/jBRjPCiyxoJvrjOh-UuQgcXIKYH1WEU2KbiqOpq7Qbs_sjivoR4bWAgFw3dq_uDOgf1PswVnmeue7zWSbTl3xy2EtTRizVln5WJ48RXzLeQlLlxJwJCLP421pPDIjib9IMvgx6JZZDBgxbl0ivF0bQ.webp" alt="브리티시숏헤어" /></a>
+              <a href="#">
+                <picture>
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353402003-effbc48c547d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353400249-1d96e1a7e0e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
+                  <source srcset="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                  <img src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="하품고양이" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <strong class="text-area__tit">slide 제목</strong>
+                    <p class="text-area__cont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, consequatur!</p>
+                    <span href="#" class="text-area__goto text-area__goto--hidden">바로가기</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <picture>
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353402003-effbc48c547d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353400249-1d96e1a7e0e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
+                  <source srcset="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                  <img src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="하품고양이" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <strong class="text-area__tit">slide 제목</strong>
+                    <p class="text-area__cont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, consequatur!</p>
+                    <span href="#" class="text-area__goto text-area__goto--hidden">바로가기</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <picture>
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353402003-effbc48c547d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
+                  <source srcset="https://plus.unsplash.com/premium_photo-1707353400249-1d96e1a7e0e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
+                  <source srcset="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                  <img src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="하품고양이" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <strong class="text-area__tit">slide 제목</strong>
+                    <p class="text-area__cont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, consequatur!</p>
+                    <span href="#" class="text-area__goto text-area__goto--hidden">바로가기</span>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           <!-- If we need pagination -->
@@ -184,7 +348,7 @@
         loop: true,
         // autoplay: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.slide-intro .swiper-pagination',
           clickable: true,
         },
         // breakpoints: {
@@ -207,7 +371,7 @@
         slidesPerView: 1,
         spaceBetween: 20,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.slide-studio .swiper-pagination',
           clickable: true,
         },
         breakpoints: {
