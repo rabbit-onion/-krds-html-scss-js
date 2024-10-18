@@ -3,12 +3,18 @@
 /* **** text attr ****/
 /* **** scroll ****/
 /* **** form mixin ****/
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Pretendard GOV", sans-serif;
+  font-family: "Pretendard", sans-serif;
   color: var(--krds-gray-90);
   font-weight: 400;
   line-height: 1.5;
@@ -3194,6 +3200,12 @@ input[type=checkbox] {
   text-align: center;
   background-color: #1d1d1d;
 }
+#skip-nav.type1 {
+  background-color: #fff;
+}
+#skip-nav.type1 a:focus {
+  color: #1d1d1d;
+}
 #skip-nav a:not(:focus) {
   position: absolute !important;
   width: 1px !important;
@@ -3228,6 +3240,7 @@ input[type=checkbox] {
 
 .sec-g {
   padding: 10vw 0;
+  overflow: hidden;
 }
 .sec-g__tit {
   font-size: 4.8rem;
@@ -3318,15 +3331,21 @@ input[type=checkbox] {
   border: 0 !important;
 }
 #header #nav-all {
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100%;
   height: 100%;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  transition: all 0.5s;
+}
+#header #nav-all.active {
+  display: block;
+  left: 0;
 }
 
 #gnb {
@@ -3559,6 +3578,7 @@ input[type=checkbox] {
 .slide-intro .swiper-slide .text-area__tit {
   font-size: 3rem;
   color: #1d1d1d;
+  font-family: GmarketSansMedium;
 }
 .slide-intro .swiper-slide .text-area__cont {
   color: #555555;
